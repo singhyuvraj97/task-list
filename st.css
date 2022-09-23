@@ -74,6 +74,34 @@
   align-self: stretch;
 }
 
+/* .filterTaskCont{
+  border: 1px solid var(--section-head-color);
+} */
+
+.filterTaskCont ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+
+.filterTaskCont ul li{
+  text-align: center;
+  flex-grow: 1;
+  list-style: none;
+  padding: 10px;
+}
+
+.filterTaskCont ul li input{
+  width: 100%;
+  height: 100%;
+}
+
+.filterTaskCont ul li input[type="text"]{
+  border-bottom: 1px solid var(--section-para-color);
+}
+
 .dispTaskCont{
   padding: var(--card-padding);
   border-bottom-left-radius: var(--card-border-radius);
@@ -105,3 +133,4 @@
   font-weight: bolder;
   cursor:pointer;
 }
+
