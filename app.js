@@ -86,7 +86,7 @@ function filterTask(e) {
     function shout(val,key) {
       if(!val.firstChild.nodeValue.includes(inputStr)){
         console.log(key,val,"substring not found");
-        val.style.visibility = "hidden";
+        val.style.display = "none";
       }
     }
   }
@@ -98,6 +98,6 @@ function filterTask(e) {
 function resetList(e){
   // console.log(taskListCont.children);
   for(let val of taskListCont.children){
-    val.style.visibility = "visible";
+    val.style.display = "block";
   }
 }
