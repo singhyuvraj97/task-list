@@ -24,6 +24,10 @@
   --section-border-bottom: 1px solid var(--section-para-color);
 }
 
+body{
+  background-color: rgb(142, 165, 163);
+}
+
 .card{
   max-width: 30vw;
   min-width: 340px;
@@ -32,6 +36,7 @@
   border-radius: var(--card-border-radius);
   box-shadow: 5px 5px 10px rgba(128, 128,128, 0.8);
   color: var(--section-para-color);
+  background-color: white;
 }
 
 .cardBtn{
