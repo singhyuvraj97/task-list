@@ -6,6 +6,8 @@ const clearTaskBtn = document.querySelector(".clearAllTask .cardBtn");
 const filterTaskInput = document.querySelector(".filterTaskCont ul li input[type='text']");
 const filterTaskBtn = document.querySelector(".filterTaskCont ul li input[type='submit']");
 
+let tasks = [];
+
 // console.log(filterTaskInput);
 // console.log(filterTaskInput.value);
 // console.log(filterTaskBtn);
@@ -38,6 +40,17 @@ function addTask(e) {
 
   //append textnode to li node
   task.appendChild(text);
+
+  //localstorage
+  if(localStorage.getItem("tasks") !== null){
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+    tasks.push(newTaskInput.value);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+  }
+  else{
+    tasks.push(newTaskInput.value);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
+  }
 
   //create remove button
   let rmBtn = document.createElement("a");
